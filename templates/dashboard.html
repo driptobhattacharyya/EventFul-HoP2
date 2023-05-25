@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_teams.css') }}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidenav">
+        <br />
+        <div class="pp">
+          <img src="{{ url_for('static', filename='images/EF.jpg') }}" alt="" />
+          <div class="pptext">
+            <h2>EVENTFUL</h2>
+          </div>
+        </div>
+        <div class="boxx">
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/globe-solid.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="{{ url_for('dashboard')}}"><h3 class="umm">Events</h3></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/peolefind.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="{{ url_for('teammate_finder')}}"><h3 class="umm">Teammate Finding</h3></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/user-regular.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="{{ url_for('profile') }}"><h3 class="umm">Profile</h3></a>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="marginleft">
+          <h1>Upcoming Events</h1>
+          <p>No events</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="restbody">
+            
+            <p> Events will be recommended shortly</p>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-header">
+                <form class="login-card-form" method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded"></span>
+                        {{ form.username() }}
+                    </div>
+                    <div class="form-item">
+                        <span class="form-item-icon material-symbols-rounded"></span>
+                        {{ form.password() }}
+                    </div>
+                    {{ form.submit() }}
+                </form>
+            </div>
+            <div class="login-card-footer">
+                <a href="{{url_for('signup')}}">Don't have an account? Create one!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

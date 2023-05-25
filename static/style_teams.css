@@ -1,0 +1,160 @@
+.restbody{
+    position: absolute;
+    width: 55%;
+    margin-left: 26%;
+}
+.chatbox{
+    position: fixed;
+    width: 20%;
+    margin-left: 82%; 
+    height: 100%;
+    background: #9effdb;
+    position: fixed;
+}
+img{
+    width: 75px;
+}
+.boxx img{
+    width: 25px;
+}
+.icon{
+    display: flex;
+}
+.pp{
+    margin-left: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+.pptext{
+    margin-left: 10px;
+    display: flex;
+}
+.ppi p{
+    font-size: 10px;
+    position: absolute;
+}
+.sidenav{
+    margin-top: -3vh;
+    background: #00ffc8;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+
+}
+.bottom{
+    background: #36ecc1;
+    position: fixed;
+    width: 25%;
+    height: 40%;
+    margin-top: 60vh;
+}
+
+.inpdiv{
+    margin: 30px;     
+    margin-right: 0%;
+    display: inline-block;
+    /* background: black; */
+}
+.marginleft{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.inbox{
+    
+    margin-top: -3vh;
+    height: 8vh;
+    background-color: #27bf9c;
+    padding: 20px;
+}
+.chats{
+    
+
+}
+ul{
+    text-align: left;
+}
+li{
+    list-style-type: none;
+
+}
+a{
+    text-decoration:none;
+}
+.boxx{
+    padding-left: 0%;
+    padding: 10%;
+    border-radius: 10%;
+}
+.umm{
+    width: fit-content;
+    height: fit-content;
+    background-color: #8cc0b6;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 25px;
+    display: flex;
+}
+label{
+    position: relative;
+}
+button{
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    /* padding: 10px; */
+
+
+}
+.sb img{
+    width: 20px;
+}
+input{
+    padding: 10px;
+    /* border: none; */
+    width: 75vh;
+    /* height: 30px; */
+    border-radius: 25px;
+    text-align: center;
+}
+.ppi{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+}
+.ppi img{
+    width: 50px;
+}
+
+
+.sir{
+    position: relative;
+    display: flex;
+    /* height: 100; */
+    /* width: 100%; */
+    column-gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.search-result{
+    
+    border-radius: 50px;
+    width: 45%;
+    /* padding: 30px; */
+    background-color: #84f9db;
+}
+.sir img{
+border-radius: 100px;
+width: 100px;
+
+/* align-items: center; */
+}
+.srimg{
+    /* background-color: #000000; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}

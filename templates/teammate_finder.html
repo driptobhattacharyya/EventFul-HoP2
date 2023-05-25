@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_teams.css') }}" />
+    <title>Search</title>
+    <style>
+      .search-result {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidenav">
+        <br />
+        <div class="pp">
+          <img src="{{ url_for('static', filename='images/EF.jpg') }}" alt="" />
+          <div class="pptext">
+            <h2>EVENTFUL</h2>
+          </div>
+        </div>
+        <div class="boxx">
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/globe-solid.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="{{ url_for('dashboard')}}"><h3 class="umm">Events</h3></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/peolefind.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="#"><h3 class="umm">Teammate Finding</h3></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pp">
+              <img src="{{ url_for('static', filename='icons/user-regular.svg') }}" alt="" />
+              <div class="pptext">
+                <a href="{{ url_for('profile') }}"><h3 class="umm">Profile</h3></a>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="marginleft">
+          <h1>Upcoming Events</h1>
+          <p>No events</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      <div class="restbody">
+        <!-- <h1>Search</h1> -->
+        <form
+          class="search"
+          method="POST"
+          action="{{ url_for('teammate_finder') }}"
+        >
+          <!-- <label for="skill_input"
+            >Enter desired skills and ratings (skill1:rating1, skill2:rating2,
+            skill3:rating3):</label
+          ><br /> -->
+          <label>
+            <div class="inpdiv">
+              <input
+                type="text"
+                id="skill_input"
+                name="skill_input"
+                placeholder="Search Bar"
+                required
+              /><br />
+            </div>
+            <button type="submit">
+              <div class="sb">
+                <img src="{{ url_for('static', filename='icons/magnifying-glass-solid.svg') }}" alt="" />
+              </div>
+            </button>
+          </label>
+        </form>
+        {% if skill_input %}
+
+        <h2>Search Results:</h2>
+        {% for person, skills in recommended_teammates %}
+
+        <div class="sir">
+          <div class="search-result">
+            <div class="srimg"><img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" /><h3>&nbsp&nbsp{{ person }}</h3></div>
+            <br>
+            {% for skill, rating in skills %}
+            <p>{{ skill }}, Rating: {{ rating }}</p>
+            {% endfor %}
+          </div>
+          <!--a href="url_for('person')">View Profle</a-->
+        </div>
+        
+        {% endfor %} {% endif %}
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="chatbox">
+        <div class="inbox">
+          <h1>INBOX</h1>
+        </div>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ppi">
+            <img src="{{ url_for('static', filename='icons/iii.webp') }}" alt="" />
+            <div class="pptext">
+              <h3>
+                Sachin
+                <p>Okay </p>
+              </h3>
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
